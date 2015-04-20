@@ -1,0 +1,211 @@
+/*Basic styles*/
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #646473;
+  font-size: 16px;
+  font-family: 'roboto', Calibri, Helvetica, Arial, sans-serif;
+  line-height: 150%;
+}
+
+div {
+  display: block;
+}
+
+h1 {
+  font-size: 50px;
+  color: black;
+  margin: 0px 0 50px;
+  line-height: 100%;
+
+}
+
+hr {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -30px;
+  width: 60%;
+  height: 5px;
+  background-color: rgba(0,0,0,0.05);
+  border: 0;
+}
+
+p {
+  font-family: "pt serif", Helvetica, Arial, sans-serif
+}
+
+/*Styles for block centering*/
+.Absolute-Center {
+  height: 50%;
+  width: 50%;
+  overflow: visible;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 70%;
+  height: 70%;
+  min-width: 200px;
+  max-width: 600px;
+}
+
+.Center-Container {
+  width: 100%;
+  height: 720px;
+  margin: 20px auto 40px;
+  clear: both;
+}
+
+.Side-Note {
+  font-style: italic;
+  color: #B2B2B2;
+}
+
+/* Styles for responsive form */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px 15%;
+}
+form header {
+  margin: 0 0 20px 0;
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+  font-size: 90%;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 50%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0;
+  }
+  form > div > label,
+  legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  form > div > label,
+  legend {
+    text-align: left;
+  }
+}
+
+#contact_form input:focus:invalid, #contact_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
+  background: #fff url(images/invalid.png) no-repeat 98% center;
+  box-shadow: 0 0 5px #d45252;
+}
+
+#contact_form input:required:valid, #contact_form textarea:required:valid { /* when a field is considered valid by the browser */
+  background: #fff url(images/valid.png) no-repeat 98% center;
+  box-shadow: 0 0 5px #5cd053;
+  border-color: #28921f;
+}
+
+/* Button style */
+.clouds-flat-button {
+  position: relative;
+  vertical-align: top;
+  width: 50%;
+  height: 40px;
+  padding: 0;
+  font-size: 16px;
+  color:#454545;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #ecf0f1;
+  border: 0;
+  border-bottom: 2px solid #dadedf;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #dadedf;
+  box-shadow: inset 0 -2px #dadedf;
+}
+.clouds-flat-button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
