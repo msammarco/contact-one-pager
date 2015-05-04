@@ -30,10 +30,11 @@ jQuery(function($) {
       return false
     }
 
+    $("#contact_form").html("<img class='busy-loading' src='/images/ajax-loader.gif' />")
+
     $.ajax({
         type: "POST",
         url: "/c/contact_me",
-        async: false,
         data: JSON.stringify({
           'message': {
             'from_email': email,
